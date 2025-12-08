@@ -214,7 +214,7 @@ G = F × F^T / (C × H × W)
 <tr>
 <td><img src="images/content/city.png" width="280"></td>
 <td><img src="images/style/vangogh_starry_night.png" width="280"></td>
-<td><img src="output_city_starry_night1.jpg" width="280"></td>
+<td><img src="output/output_city_starry_night1.jpg" width="280"></td>
 </tr>
 </table>
 

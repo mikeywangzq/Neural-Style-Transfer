@@ -27,11 +27,11 @@ wheels/
 *.pth
 *.pt
 
-# 输出图像
-output*.jpg
-output*.png
-result*.jpg
-result*.png
+# 输出图像（仅忽略根目录下的输出文件）
+/output*.jpg
+/output*.png
+/result*.jpg
+/result*.png
 
 # 测试图像 (可选)
 # images/
