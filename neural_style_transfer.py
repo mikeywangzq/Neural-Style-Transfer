@@ -177,7 +177,18 @@ class StyleTransferModel(nn.Module):
         super(StyleTransferModel, self).__init__()
 
         # 加载预训练的 VGG19 特征提取器
-        vgg = models.vgg19(pretrained=True).features.to(device).eval()
+        # 首先尝试从本地checkpoints目录加载
+        import os
+        local_model_path = 'checkpoints/vgg19-dcbb9e9d.pth'
+        
+        if os.path.exists(local_model_path):
+            print(f"从本地加载VGG19模型: {local_model_path}")
+            vgg = models.vgg19(pretrained=False)
+            vgg.load_state_dict(torch.load(local_model_path, map_location=device))
+            vgg = vgg.features.to(device).eval()
+        else:
+            print("从PyTorch Hub下载VGG19模型...")
+            vgg = models.vgg19(pretrained=True).features.to(device).eval()
 
         # 将所有参数设为不需要梯度
         for param in vgg.parameters():

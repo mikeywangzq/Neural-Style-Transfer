@@ -205,7 +205,20 @@ G = F × F^T / (C × H × W)
 
 **内容图** + **风格图** → **风格化输出**
 
-*（准备好您的图片，开始创作吧！）*
+<table>
+<tr>
+<td align="center"><b>内容图</b></td>
+<td align="center"><b>风格图</b></td>
+<td align="center"><b>输出结果</b></td>
+</tr>
+<tr>
+<td><img src="images/content/city.png" width="280"></td>
+<td><img src="images/style/vangogh_starry_night.png" width="280"></td>
+<td><img src="output_city_starry_night1.jpg" width="280"></td>
+</tr>
+</table>
+
+*芝加哥城市风光 + 梵高《星夜》风格*
 
 </div>
 
